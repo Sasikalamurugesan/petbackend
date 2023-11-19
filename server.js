@@ -4,18 +4,17 @@ const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const app = express();
-const cors = require('cors');
+const cors = require('cors');  // Corrected declaration
 const port = process.env.PORT || 10000;
 
 // Use environment variable for MongoDB connection string
-
 mongoose.connect('mongodb+srv://sasikalam21it:Gd4CeQAoYntoLIBi@cluster0.2tw6imi.mongodb.net/?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
 
 app.use(bodyParser.json());
-const cors = require('cors');
+
 const corsOptions = {
   origin: 'http://localhost:10000',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
