@@ -15,13 +15,13 @@ mongoose.connect('mongodb+srv://sasikalam21it:Gd4CeQAoYntoLIBi@cluster0.2tw6imi.
 
 app.use(bodyParser.json());
 
-const corsOptions = {
-  origin: 'http://localhost:10000',
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true,
-};
+// const corsOptions = {
+//   origin: 'http://localhost:10000',
+//   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+//   credentials: true,
+// };
 
-app.use(cors(corsOptions));
+app.use(cors());
 
 const User = mongoose.model('User', {
   username: String,
