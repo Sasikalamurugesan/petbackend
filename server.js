@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const app = express();
-
+const port = process.env.PORT || 3000;
 mongoose.connect('mongodb+srv://sasikalam21it:Gd4CeQAoYntoLIBi@cluster0.2tw6imi.mongodb.net/?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -295,7 +295,8 @@ app.get('/Payment',(req,res)=>{
 
 
 
-const port = process.env.PORT || 3000;
+
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
